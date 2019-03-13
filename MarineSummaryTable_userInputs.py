@@ -6,11 +6,12 @@ import os
 #for fast checking
 #######
 
+"""
 xls = pd.ExcelFile('ET Inspection Register 3206.xlsx')
 xls_code = pd.ExcelFile('codesReference_3206.xlsx')
 contract_no = '3206'
-
 """
+
 contract_no = input('Please enter contract number: ')
 xls_file = input('Please enter file path of the excel template: ')
 xls_file = os.path.abspath(xls_file)
@@ -20,7 +21,7 @@ xls_code = os.path.abspath(xls_code)
 
 xls = pd.ExcelFile(xls_file)
 xls_code = pd.ExcelFile(xls_code)
-"""
+
 code = xls_code.parse('Sheet1')
 
 #function to get the time delta between today and data of inspection
